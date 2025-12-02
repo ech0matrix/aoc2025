@@ -125,6 +125,10 @@ data class InclusiveRange<T : Comparable<T>>(
         return this.x <= other.x && this.y >= other.y
     }
 
+    fun contains(other: T): Boolean {
+        return this.x <= other && this.y >= other
+    }
+
     fun overlaps(other: InclusiveRange<T>): Boolean {
         return (this.x >= other.x && this.x <= other.y)
                 || (this.y >= other.x && this.y <= other.y)
