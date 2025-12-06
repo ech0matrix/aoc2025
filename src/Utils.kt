@@ -11,6 +11,9 @@ import kotlin.math.abs
  */
 fun readInput(name: String) = Path("src/$name.txt").readText().trim().lines()
 
+// For when trailing whitespace matters (Day 06, 2025)
+fun readInputNoTrim(name: String) = Path("src/$name.txt").readText().lines()
+
 /**
  * Converts string to md5 hash.
  */
